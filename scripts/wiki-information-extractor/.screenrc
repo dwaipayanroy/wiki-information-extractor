@@ -1,0 +1,60 @@
+altscreen on
+compacthist on
+defflow off
+deflogin off
+defscrollback 2000
+defutf8 on
+escape "^Xx"
+hardstatus alwayslastline
+hardstatus string '%{=kw}%-w%{= rk}[%n %t]%{-}%+w %=%{= kG}[%d/%m %c]'
+ignorecase on
+startup_message off
+termcapinfo xterm 'hs:ts=\E]0;\007:fs=\007:ds=\E]0;\007'
+termcapinfo xterm|xterms|xs ti@:te=\E[2J # enables shift + pgup/pgdn
+vbell off
+
+setenv PROMPT_COMMAND 'echo -n -e "\033k${PWD##*/}\033\\"'
+
+bind b select
+bind ^b windowlist
+bind ^o other
+bind ^t title
+bind ^w copy
+bind ^x meta
+bind ^y paste
+
+# Shift-R, Shift-L
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
+# Ctrl-R, Ctrl-L
+#bindkey ^[[1;5D prev
+#bindkey ^[[1;5C next
+
+# shift + up/dn
+register u "[" # register U == enter copy mode, scroll up by one line
+bindkey ^[[1;2A process u # shift-up = scroll up by one line
+bindkey -m ^[[1;2A stuff ^Y # shift-up = scroll up by one line
+bindkey -m ^[[1;2B stuff ^E # shift-down = scroll down by one line
+
+# shift + pgup/pgdn (also see .Xdefaults: XTerm.VT100.translations)
+bindkey "^[[5;2~" eval "copy" "stuff ^b" 
+bindkey "^[[5~" eval "copy" "stuff ^b" 
+bindkey -m "^[[5;2~" stuff ^b 
+bindkey -m "^[[5~" stuff ^b 
+bindkey -m "^[[6;2~" stuff ^f 
+bindkey -m "^[[6~" stuff ^f 
+
+# Bindings related to a split screen
+bind 0 remove
+bind 1 only
+bind 2 split
+bind 3 split -v
+
+bind j focus down
+bind k focus up
+bind o focus
+bind = resize +1
+bind - resize -1
+
+# bind j eval "copy" "stuff gw^MG^M" -> intended to copy entire scrollback buffer?
+#   bind P eval "copy" "stuff -k ku" "stuff Y" "stuff \033"

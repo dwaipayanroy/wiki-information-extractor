@@ -1,0 +1,15 @@
+
+{
+	"id":123,
+	"name":"Pankaj Kumar",
+	"permanent":true,
+	"address":{
+			"street":"El Camino Real",
+			"city":"San Jose",
+			"zipcode":95014
+		},
+	"phoneNumbers":[9988664422, 1234567890],
+	"role":"Developer",
+  "translation": "In Gujarati language, the meaning of \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" \"\" which means \"\" \"perfume\" \" which is known as the perfume of English in English.Mahatma Gandhi Mohandas Karamchand Gandhi (2 October 1869-30 January, 1948) was a prominent political and spiritual leader of the Indian independence movement."
+}
+
