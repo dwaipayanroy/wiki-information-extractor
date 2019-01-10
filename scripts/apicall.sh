@@ -1,4 +1,6 @@
 #!/bin/bash
+# Given the Wikipedia curid, this code finds the corresponding Wikidata Id for that article.
+# which will be needed to 'join' the same articles in different languages.
 
 cd ../
 

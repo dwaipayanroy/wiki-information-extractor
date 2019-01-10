@@ -158,7 +158,7 @@ public class CallWikipediaAPI {
         }
         // */
 
-//        /*
+        /*
         args = new String[3];
         args[0] = "en";
         args[1] =  "/home/dwaipayan/collections/wikipedia-stats/en/en-missing-torun.tsv";

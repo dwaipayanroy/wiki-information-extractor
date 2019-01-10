@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 
 /**
  *
- * @author Dwaipayan <dwaipayan.roy@gmail.com>
+ * @author Dwaipayan dwaipayan.roy@gmail.com
  */
 public class WikiInfobox {
     public static void main(String[] args) throws IOException {

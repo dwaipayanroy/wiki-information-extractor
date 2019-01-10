@@ -23,7 +23,7 @@ then
     echo "Usage: " $0 " <spec-path> <index-path> [dump-path]";
     echo "1. spec-path: ";
     echo "2. index-path: ";
-    echo "3. Language: en/es/hi/pt: ";
+    echo "3. Language: ar/de/en/es/hi/ko/pt/ru/tr: ";
     exit 1;
 fi
 

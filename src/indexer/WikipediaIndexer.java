@@ -18,10 +18,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.ar.ArabicAnalyzer;
+import org.apache.lucene.analysis.cjk.CJKAnalyzer;  // Korean analyzer
+import org.apache.lucene.analysis.de.GermanAnalyzer;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.es.SpanishAnalyzer;
 import org.apache.lucene.analysis.hi.HindiAnalyzer;
 import org.apache.lucene.analysis.pt.PortugueseAnalyzer;
+import org.apache.lucene.analysis.ru.RussianAnalyzer;
+import org.apache.lucene.analysis.tr.TurkishAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -88,6 +93,12 @@ public class WikipediaIndexer {
             System.exit(0);
         }
         switch(collLang) {
+            case "ar":
+                analyzer = new ArabicAnalyzer();
+                break;
+            case "de":
+                analyzer = new GermanAnalyzer();
+                break;
             case "en":
                 analyzer = new EnglishAnalyzer();
                 break;
@@ -97,8 +108,17 @@ public class WikipediaIndexer {
             case "hi":
                 analyzer = new HindiAnalyzer();
                 break;
+            case "ko":
+                analyzer = new CJKAnalyzer();
+                break;
             case "pt":
                 analyzer = new PortugueseAnalyzer();
+                break;
+            case "ru":
+                analyzer = new RussianAnalyzer();
+                break;
+            case "tr":
+                analyzer = new TurkishAnalyzer();
                 break;
             default:
                 analyzer = null;

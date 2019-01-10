@@ -9,7 +9,7 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 /**
  *
- * @author Dwaipayan <dwaipayan.roy@gmail.com>
+ * @author Dwaipayan dwaipayan.roy@gmail.com
  */
 public class TaggingNE {
     public static void main(String[] args) {
